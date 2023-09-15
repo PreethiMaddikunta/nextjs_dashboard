@@ -3,7 +3,7 @@ import css from './Dashboard.module.css';
 
 function Dashboard() {
   return (
-    <div> Dashboard</div>
+    <div className={css.container}>  Dashboard</div>
   )
 }
 

@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0rem 4rem;
+    display: flex;
+    gap: 2rem;
+  }
