@@ -8,9 +8,10 @@ import moment from 'moment';
 import { BiSearch } from 'react-icons/bi';
 
 const inter = Inter({ subsets: ['latin'] })
-const publicSans = Public_Sans({ subsets: ['latin'],
-weight: ['300', '400', '500', '600'],
-display: 'swap',
+const publicSans = Public_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -25,39 +26,39 @@ export default function RootLayout({
 }) {
   return (
     <div>
-        <div id="dashboard">
+      <div id="dashboard">
         <div className={css.container}>
-        <Sidebar/>
+          <Sidebar />
 
-        <div className={css.dashboard}>
-          <div className={css.topBaseGradients}>
-            <div className="gradient-red"></div>
-            <div className="gradient-orange"></div>
-            <div className="gradient-blue"></div>
-          </div>
-
-
-        <div className={css.header}>
-
-          <span>{moment().format("dddd, Do MMM YYYY")}</span>
-
-          <div className={css.searchBar}>
-            <BiSearch size={20} />
-            <input type="text" placeholder="Search" />
-          </div>
-
-          <div className={css.profile}>
-            <img src="https://cdn-icons-png.flaticon.com/256/4825/4825112.png" alt="person image" />
-            <div className={css.details}>
-              <span>Preeti Sharma</span>
-              <span>preetisharma@gmail.com</span>
+          <div className={css.dashboard}>
+            <div className={css.topBaseGradients}>
+              <div className="gradient-red"></div>
+              <div className="gradient-orange"></div>
+              <div className="gradient-blue"></div>
             </div>
+
+
+            <div className={css.header}>
+
+              <span>{moment().format("dddd, Do MMM YYYY")}</span>
+
+              <div className={css.searchBar}>
+                <BiSearch size={20} />
+                <input type="text" placeholder="Search" />
+              </div>
+
+              <div className={css.profile}>
+                <img src="https://cdn-icons-png.flaticon.com/256/4825/4825112.png" alt="person image" />
+                <div className={css.details}>
+                  <span>Preeti Sharma</span>
+                  <span>preetisharma@gmail.com</span>
+                </div>
+              </div>
+            </div>
+            <body className={publicSans.className}>{children}</body>
           </div>
         </div>
-      <body className={publicSans.className}>{children}</body>
-        </div>
-          </div>
-        </div>
+      </div>
 
     </div>
   )
