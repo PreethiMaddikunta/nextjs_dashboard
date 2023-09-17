@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import css from './Statistics.module.css';
 import { BsArrowUpShort } from 'react-icons/bs'

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import ReactECharts from "echarts-for-react";
 import * as echarts from "echarts";
@@ -81,7 +82,7 @@ const OrdersPieChart = () => {
 
     return (
         <>
-        {/* <ReactECharts style={{ height: 140, marginTop: "1rem" }} option={option} /> */}
+        <ReactECharts style={{ height: 140, marginTop: "1rem" }} option={option} />
         </>
     )
 }

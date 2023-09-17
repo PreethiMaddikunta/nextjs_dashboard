@@ -1,3 +1,4 @@
+'use client';
 import React, { useMemo } from "react";
 import MaterialReactTable from "material-react-table";
 import { userData } from "../data";
@@ -8,39 +9,46 @@ const Users = () => {
   const columns = useMemo(() => [
     {
       accessorKey: "name.firstName",
-      header: "First Name",
+      Header: "First Name",
+      id: "firstName", // Unique identifier for the column
     },
     {
       accessorKey: "name.lastName",
-      header: "Last Name",
+      Header: "Last Name",
+      id: "lastName",
     },
     {
       accessorKey: "address", //normal accessorKey
-      header: "Address",
+      Header: "Address",
+      id: "address",
     },
     {
       accessorKey: "city",
-      header: "City",
+      Header: "City",
+      id: "city"
     },
     {
       accessorKey: "state",
-      header: "State",
+      Header: "State",
+      id: "state",
     },
   ],[]);
 
-  // const theme = useMemo(() =>
-  //   createTheme({
-  //     palette: {
-  //       mode: "dark",
-  //     },
-  //   }),[]
-  // );
+  const theme = useMemo(() =>
+    createTheme({
+      palette: {
+        mode: "dark",
+      },
+    }),[]
+  );
+
+
 
   return (
     <div className="table-container">
-      {/* <ThemeProvider theme={theme}> */}
-        {/* <MaterialReactTable columns={columns} data={userData} />` */}
-      {/* </ThemeProvider> */}
+      <ThemeProvider theme={theme}>
+        <MaterialReactTable columns={columns} data={userData} />
+      </ThemeProvider>
     </div>
   );
 };

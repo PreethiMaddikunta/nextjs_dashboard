@@ -1,3 +1,5 @@
+'use client';
+
 import ReactECharts from 'echarts-for-react'
 import * as echarts from 'echarts'
 const StatisticsChart = () => {
@@ -83,8 +85,8 @@ const StatisticsChart = () => {
 
     return (
         <>
-        Charts
-        {/* <ReactECharts option={option}/> */}
+        Charts 1
+        <ReactECharts option={option}/>
         </>
     )
 }
